@@ -6,6 +6,7 @@ terminal emulators and Intellij IDEA support), 'underlining', color ranges, line
 ![1](img/example1.png)
 
 (also works in IntelliJ on Windows):
+
 ![1i](img/example1_intellij.jpg)
 
 ```kotlin
