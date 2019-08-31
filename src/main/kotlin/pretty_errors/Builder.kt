@@ -258,7 +258,7 @@ class TextObject(val rawString: String, var hasLineNumber: Boolean = false, val 
      * @param hint informational text that will be displayed below the line
      */
     fun warn(range: IntRange, hint: String = ""): TextObject {
-        return underline(range, char = '~', hasArrowTip = true, arrowTip = '^', colorPrefix = ANSI_LIGHT_YELLOW, hint = hint)
+        return underline(range, char = '~', hasArrowTip = true, arrowTip = '^', colorPrefix = ANSI_YELLOW, hint = hint)
     }
 
     /**

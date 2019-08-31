@@ -1,9 +1,12 @@
-# Pretty Errors!
+# Prettier Errors!
 Small library for highlighting errors in user input, inspired by the Rust compilers' error messages.
 Features include support for any color codes (comes with ANSI terminal color codes, which most
 terminal emulators and Intellij IDEA support), 'underlining', color ranges, line numbering.
 ## Examples
-![1](img/example1.jpg)
+![1](img/example1.png)
+
+(also works in IntelliJ on Windows):
+![1i](img/example1_intellij.jpg)
 
 ```kotlin
 prettyPrint(color = true) {
@@ -19,7 +22,7 @@ prettyPrint(color = true) {
 
 Use ``prettyFmt`` instead of ``prettyPrint`` if you don't want to write to stdout.
 
-![2](img/example2.jpg)
+![2](img/example2.png)
 
 ```kotlin
 prettyPrint(color = true) {
@@ -32,7 +35,7 @@ prettyPrint(color = true) {
 ```
 Example with **Regex**:  
 
-![3](img/example3.jpg)
+![3](img/example3.png)
 ```kotlin
 val str = "aaabbbbaaabbaaabbbbaaa"
 val regex = "aaa".toRegex()
@@ -49,3 +52,15 @@ prettyPrint(color = true) {
     text("Found " concat result.count().toString().pe().color(ANSI_GREEN) concat " occurrences.")
 }
 ```
+
+# Quick start
+Using gradle: Put ``PrettyErrorsLib-*.jar`` (see "Aritfacts") into your ``libs/`` folder, then add
+```
+dependencies {
+    compile files('libs/PrettyErrorsLib-1.0.jar')
+}
+```
+to your ``build.gradle`` (replace version number accordingly).
+
+# Artifacts
+Releases: [Link](https://github.com/hilbigan/PrettyErrors/releases)
